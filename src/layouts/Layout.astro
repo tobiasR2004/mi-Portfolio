@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro'
 import '../styles/global.css'
+import '@fontsource-variable/inter';
 ---
 <!doctype html>
 <html lang="en">
@@ -11,17 +12,19 @@ import '../styles/global.css'
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="h-screen custom-gradient">
 		<Header />
+		<slot />
 	</body>
 </html>
 
 <style>
 	html{
-		
+		font-family: 'Inter Variable', sans-serif;
+		font-weight: 400;
 	}
 	body {
-		display: flex; 
-		justify-content: center;
+		color: #373737
+		;
 	}
 </style>

@@ -1,10 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Estado from '../components/Estado.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main class="mt-30">
+	<section class=" ml-12 mt-6 grid gap-3">
+		<h1 class="text-4xl font-bold max-w-70">Hola, soy Pepino di novo</h1>
+		<Estado>✔ Disponible para Trabajar </Estado>
+		<p class="max-w-130	pt-1 text-justify"> Técnico Superior en Desarrollo de Software, con experiencia en desarrollo fullstack de páginas web y aplicaciones de escritorio. <br /> 
+		He trabajado en modalidad freelance, participando en proyectos 
+		desde el diseño hasta la implementación final.</p>
+		
+	</section>
+		<div class="h-px  bg-gray-400 mt-4"></div>
+	</main>
 </Layout>
