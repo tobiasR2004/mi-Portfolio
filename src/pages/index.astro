@@ -1,20 +1,47 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Estado from '../components/Estado.astro';
+import Layout from "../layouts/Layout.astro";
+import Estado from "../components/Estado.astro";
+import SocialContact from "../components/SocialContact.astro"
+import LinkedinIcon from "../components/Icons/LinkedIn.astro"
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<main class="mt-30">
-	<section class=" ml-12 mt-6 grid gap-3">
-		<h1 class="text-4xl font-bold max-w-70">Hola, soy Pepino di novo</h1>
-		<Estado>✔ Disponible para Trabajar </Estado>
-		<p class="max-w-130	pt-1 text-justify"> Técnico Superior en Desarrollo de Software, con experiencia en desarrollo fullstack de páginas web y aplicaciones de escritorio. <br /> 
-		He trabajado en modalidad freelance, participando en proyectos 
-		desde el diseño hasta la implementación final.</p>
-		
-	</section>
-		<div class="h-px  bg-gray-400 mt-4"></div>
-	</main>
+  <main class="mt-15">
+    <section class="justify-center grid gap-3">
+      <img
+        class="mx-2.5 rounded-full w-20 h-21"
+        src="/images/FotoLinkedin.jpg"
+        alt=""
+        class=""
+      />
+      <h1 class="text-4xl font-bold">
+        Hola, soy Tobias Romani <Estado
+          ><a
+            href="https://www.linkedin.com/in/tobias-romani/"
+            target="_blank"
+            rel="noopener"
+            >✔ Disponible para Trabajar
+          </a></Estado>
+      </h1>
+
+      <p class="max-w-170 pt-1 text-1xl text-justify"><span class="font-bold text-shadow-cyan-950">
+        Técnico Superior en Desarrollo de Software </span>, con experiencia en
+        desarrollo fullstack de páginas web y aplicaciones de escritorio. He
+        trabajado en modalidad freelance, participando en proyectos desde el
+        diseño hasta la implementación final.
+      </p>
+    </section>
+
+    <div class="h-px bg-gray-400 m-4"></div>
+		<nav class="flex gap-2 justify-center">
+			<SocialContact
+			href="https://www.linkedin.com/in/tobias-romani/"
+			target="_blank"
+			rel="noopener">
+					<LinkedinIcon class="w-6 h-6">
+			</SocialContact>
+		</nav>
+  </main>
 </Layout>

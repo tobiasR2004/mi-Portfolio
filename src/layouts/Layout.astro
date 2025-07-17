@@ -12,7 +12,8 @@ import '@fontsource-variable/inter';
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body class="h-screen custom-gradient">
+	<body class="custom-gradient">
+		<div class="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
 		<Header />
 		<slot />
 	</body>
