@@ -1,0 +1,27 @@
+---
+import ExperienceItem from "../components/ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Marzo 2022 - Diciembre 2024",
+    title: "Profesor de Tenis",
+    description:
+      "Planificación y dictado de clases individuales y grupales, desarrollo de habilidades motrices y mentales en alumnos de diferentes edades. Esta experiencia fortaleció mi capacidad de liderazgo, comunicación y compromiso.",
+  },
+  {
+    date: "Diciembre 2024 - actualidad",
+    title: "Desarrollador Freelance",
+    description: "Durante el ultimo año de mi carrera desarrolle algunas aplicaciones o paginas que ayudan a automatizar ciertos procesos dentro de organizaciones, algunas estan en funcionamiento como la de gestion comercial y otras fueron solo de practica"
+  }
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4 max-w-4xl">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

@@ -5,14 +5,16 @@ import SocialContact from "../components/SocialContact.astro"
 import LinkedinIcon from "../components/Icons/LinkedInIcon.astro"
 import GitHubIcon from "../components/Icons/GitHubIcon.astro"
 import MailIcon from "../components/Icons/MailIcon.astro"
+import Experience from "../components/Experience.astro";
+import Container from "../components/Container.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Portfolio de Tobias Romani"
-descri>
+description="Desarrollo web y Escritorio">
   <main class="mt-15">
-    <section class="justify-center grid gap-3">
+    <Container>
       <img
         class="mx-2.5 rounded-full w-20 h-21"
         src="/images/FotoLinkedin.jpg"
@@ -35,7 +37,7 @@ descri>
         trabajado en modalidad freelance, participando en proyectos desde el
         diseño hasta la implementación final.
       </p>
-    </section>
+    </Container>
 
     <div class="h-px bg-gray-400 m-4"></div>
 
@@ -44,27 +46,35 @@ descri>
 			href="https://www.linkedin.com/in/tobias-romani/"
 			target="_blank"
 			rel="noopener">
-					<LinkedinIcon class="w-6 h-6" />
+					<LinkedinIcon class="size-6" />
 						LinkedIn
 			</SocialContact>
 
 			<SocialContact
-			href="https://www.linkedin.com/in/tobias-romani/"
+			href="https://github.com/tobiasR2004"
 			target="_blank"
 			rel="noopener">
-					<GitHubIcon class="w-6 h-6" />
+					<GitHubIcon class="size-6" />
             GitHub
 		</SocialContact>
 
     <SocialContact
-    href=""
+    href="mailto:tobi.26romani@gmail.com"
     target="_blank"
     rel="noopener">
-    <MailIcon class="w-6 h-6" />
+    <MailIcon class="size-6" />
       tobi.26romani@gmail.com
     </SocialContact>
 		</nav>
 		
     <div class="h-px bg-gray-400 m-4"></div>
+
+    <Container>
+      <h1 class="text-2xl text-[#090167c9] font-bold"> Experiencia </h1>
+      <Experience />
+    </Container>
+
+    <div class="h-px bg-gray-300 m-4"></div>
+
   </main>
 </Layout>
