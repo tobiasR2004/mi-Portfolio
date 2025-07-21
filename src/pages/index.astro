@@ -7,6 +7,17 @@ import GitHubIcon from "../components/Icons/GitHubIcon.astro"
 import MailIcon from "../components/Icons/MailIcon.astro"
 import Experience from "../components/Experience.astro";
 import Container from "../components/Container.astro";
+import JavaIcon from "../components/Icons/JavaIcon.astro";
+import JavaScriptIcon from "../components/Icons/JavaScriptIcon.astro";
+import CsharpIcon from "../components/Icons/CsharpIcon.astro";
+import CssIcon from "../components/Icons/CssIcon.astro";
+import HtmlIcon from "../components/Icons/Html5Icon.astro";
+import DotNetIcon from "../components/Icons/DotNetIcon.astro";
+import MySqlIcon from "../components/Icons/MySqlIcon.astro";
+import SqlServerIcon from "../components/Icons/SqlServerIcon.astro";
+import AstroIcon from "../components/Icons/AstroIcon.astro";
+import ReactIcon from "../components/Icons/ReactIcon.astro";
+import SpringIcon from "../components/Icons/SpringIcon.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -31,7 +42,7 @@ description="Desarrollo web y Escritorio">
           </a></Estado>
       </h1>
 
-      <p class="max-w-170 pt-1 text-1xl text-justify"><span class="font-bold text-shadow-cyan-950">
+      <p class="max-w-170 pt-1 text-1xl text-justify"><span class="font-bold text-[#070149c9]">
         Técnico Superior en Desarrollo de Software </span>, con experiencia en
         desarrollo fullstack de páginas web y aplicaciones de escritorio. He
         trabajado en modalidad freelance, participando en proyectos desde el
@@ -50,13 +61,14 @@ description="Desarrollo web y Escritorio">
 						LinkedIn
 			</SocialContact>
 
-			<SocialContact
-			href="https://github.com/tobiasR2004"
-			target="_blank"
-			rel="noopener">
-					<GitHubIcon class="size-6" />
-            GitHub
-		</SocialContact>
+      <SocialContact
+      href="https://github.com/tobiasR2004"
+      target="_blank"
+      rel="noopener"
+      >
+        <GitHubIcon class="size-6" />
+          GitHub
+      </SocialContact>
 
     <SocialContact
     href="mailto:tobi.26romani@gmail.com"
@@ -74,7 +86,56 @@ description="Desarrollo web y Escritorio">
       <Experience />
     </Container>
 
-    <div class="h-px bg-gray-300 m-4"></div>
+    <div class="h-px bg-gray-400 m-4"></div>
+
+    <Container>
+      <h1 class="w-4xl text-2xl text-[#090167c9] font-bold"> Habilidades </h1>
+      <a class="block max-w-4xl mb-4 p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-[#e6e6ff]">Fortalezas</h5>
+        <p class=" text-gray-200">
+          Me destaco por el aprendizaje continuo, la adaptación al cambio y la proactividad. Tengo una fuerte motivación por comprender en profundidad lo que hago, no solo enfocarme en que funcione. A lo largo de mis experiencias, he desarrollado habilidades clave como la comunicación efectiva y el compromiso con cada proyecto, sin importar el contexto o el rol que ocupe.
+        </p>
+      </a>
+    <div class="max-w-4xl flex gap-4 flex-wrap">
+      <a class="block max-w-2xl mb-4 p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-[#e6e6ff]">Habilidades Técnicas</h5>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-200">
+          <li>Desarrollo frontend</li>
+          <li>Desarrollo backend</li>
+          <li>Modelado y gestión de bases de datos relacionales</li>
+          <li>Office (Excel avanzado)</li>
+          <li>Documentación técnica: DER, DFD, Casos de uso</li>
+          <li>Ciclos de vida del software</li>
+          <li>Programación orientada a objetos y a componentes</li>
+        </ul>
+      </a>
+
+      <a class="block max-w-2xl overflow-auto mb-4 ml-15 p-6 rounded-lg shadow-sm  dark:bg-[#101120a7]">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-[#e6e6ff]">Stack</h5>
+        <nav class="grid grid-cols-3 gap-8 justify-items-start">
+          <JavaIcon class="size-9" />
+          <JavaScriptIcon class="size-9" />
+          <MySqlIcon class="size-9" />
+          <CsharpIcon class="size-9" />
+          <DotNetIcon class="size-9" />
+          <SqlServerIcon class="size-9" />
+          <GitHubIcon class="size-9" />
+          <CssIcon class="size-9" />
+          <HtmlIcon class="size-9" />
+        </nav>
+      </a>
+      <a class="block max-w-2xl overflow-auto mb-4 p-6 rounded-lg shadow-sm  dark:bg-[#101120a7]">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-[#e6e6ff]">Basico</h5>
+          <nav class="grid grid-cols-1 gap-8 justify-items-center">
+            <AstroIcon class="size-9" />
+            <ReactIcon class="size-9" />
+            <SpringIcon class="size-9" />
+          </nav>
+        </a>
+    </div>
+    </Container>
+
+  <div class="h-px bg-gray-400 m-4"></div>
 
   </main>
 </Layout>
