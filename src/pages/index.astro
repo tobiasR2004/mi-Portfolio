@@ -18,6 +18,7 @@ import SqlServerIcon from "../components/Icons/SqlServerIcon.astro";
 import AstroIcon from "../components/Icons/AstroIcon.astro";
 import ReactIcon from "../components/Icons/ReactIcon.astro";
 import SpringIcon from "../components/Icons/SpringIcon.astro";
+import GestionComercial from "../components/GestionComercial.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -82,14 +83,14 @@ description="Desarrollo web y Escritorio">
     <div class="h-px bg-gray-400 m-4"></div>
 
     <Container>
-      <h1 class="text-2xl text-[#090167c9] font-bold"> Experiencia </h1>
+      <h1 class="text-2xl text-[#000000c9] font-bold"> Experiencia </h1>
       <Experience />
     </Container>
 
     <div class="h-px bg-gray-400 m-4"></div>
 
     <Container>
-      <h1 class="w-4xl text-2xl text-[#090167c9] font-bold"> Habilidades </h1>
+      <h1 class="w-4xl text-2xl text-[#000000c9] font-bold"> Habilidades </h1>
       <a class="block max-w-4xl mb-4 p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-[#e6e6ff]">Fortalezas</h5>
         <p class=" text-gray-200">
@@ -136,10 +137,11 @@ description="Desarrollo web y Escritorio">
     </Container>
 
   <div class="h-px bg-gray-400 m-4"></div>
-  <h1 class="text-4xl text-center text-[#090167c9] font-bold"> Proyectos Destacados</h1>
-  <Container> 
-    <h1 class=" text-2xl text-[#333333cg] font-bold"> Gestion Comercial </h1>
 
+  <h1 class="max-w-4xl text-center text-2xl text-[#000000c9] font-bold mb-2"> Proyectos</h1>
+  <Container> 
+    <GestionComercial />
   </Container>
+
   </main>
 </Layout>
