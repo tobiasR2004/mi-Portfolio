@@ -1,10 +1,11 @@
 ---
+// Imports de componentes
 import Layout from "../layouts/Layout.astro";
 import Estado from "../components/Estado.astro";
-import SocialContact from "../components/SocialContact.astro"
-import LinkedinIcon from "../components/Icons/LinkedInIcon.astro"
-import GitHubIcon from "../components/Icons/GitHubIcon.astro"
-import MailIcon from "../components/Icons/MailIcon.astro"
+import SocialContact from "../components/SocialContact.astro";
+import LinkedinIcon from "../components/Icons/LinkedInIcon.astro";
+import GitHubIcon from "../components/Icons/GitHubIcon.astro";
+import MailIcon from "../components/Icons/MailIcon.astro";
 import Experience from "../components/Experience.astro";
 import Container from "../components/Container.astro";
 import JavaIcon from "../components/Icons/JavaIcon.astro";
@@ -20,136 +21,167 @@ import ReactIcon from "../components/Icons/ReactIcon.astro";
 import SpringIcon from "../components/Icons/SpringIcon.astro";
 import GestionComercial from "../components/GestionComercial.astro";
 import GestionTurnos from "../components/GestionTurnos.astro";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Portfolio de Tobias Romani"
-description="Desarrollo web y Escritorio">
-  <main class="mt-15">
-    <Container id="Presentacion">
+<Layout
+  title="Portfolio de Tobias Romani"
+  description="Desarrollo web y Escritorio"
+>
+  <main class="mt-10 px-4 sm:px-6 lg:px-8">
+    <!-- Presentación -->
+    <Container
+      id="Presentacion"
+      class="flex flex-col gap-4 items-center text-center sm:text-left sm:items-start"
+    >
       <img
-        class="mx-2.5 rounded-full w-20 h-21"
         src="/images/FotoLinkedin.jpg"
-        alt=""
-        class=""
+        alt="Foto de perfil"
+        class="rounded-full w-24 h-24"
       />
-      <h1 class="text-4xl font-bold">
+
+      <h1 class="text-3xl sm:text-4xl font-bold">
         Hola, soy Tobias Romani <Estado
           ><a
             href="https://www.linkedin.com/in/tobias-romani/"
             target="_blank"
-            rel="noopener"
-            >✔ Disponible para Trabajar
-          </a></Estado>
+            rel="noopener">✔ Disponible para Trabajar</a
+          ></Estado
+        >
       </h1>
 
-      <p class="max-w-170 pt-1 text-1xl text-justify"><span class="font-bold text-[#070149c9]">
-        Técnico Superior en Desarrollo de Software </span>, con experiencia en
-        desarrollo fullstack de páginas web y aplicaciones de escritorio. He
-        trabajado en modalidad freelance, participando en proyectos desde el
-        diseño hasta la implementación final.
+      <p class="max-w-3xl pt-1 text-lg text-justify">
+        <span class="font-bold text-[#070149c9]"
+          >Técnico Superior en Desarrollo de Software</span
+        >, con experiencia en desarrollo fullstack de páginas web y aplicaciones
+        de escritorio. He trabajado en modalidad freelance, participando en
+        proyectos desde el diseño hasta la implementación final.
       </p>
     </Container>
 
-    <div class="h-px bg-gray-400 m-4"></div>
+    <div class="h-px bg-gray-400 my-6"></div>
 
-		<nav class="flex gap-2 justify-center">
-			<SocialContact
-			href="https://www.linkedin.com/in/tobias-romani/"
-			target="_blank"
-			rel="noopener">
-					<LinkedinIcon class="size-6" />
-						LinkedIn
-			</SocialContact>
-
+    <!-- Redes -->
+    <nav class="flex flex-wrap justify-center gap-4">
       <SocialContact
-      href="https://github.com/tobiasR2004"
-      target="_blank"
-      rel="noopener"
+        href="https://www.linkedin.com/in/tobias-romani/"
+        target="_blank"
+        rel="noopener"
       >
-        <GitHubIcon class="size-6" />
-          GitHub
+        <LinkedinIcon class="size-6" /> LinkedIn
       </SocialContact>
+      <SocialContact
+        href="https://github.com/tobiasR2004"
+        target="_blank"
+        rel="noopener"
+      >
+        <GitHubIcon class="size-6" /> GitHub
+      </SocialContact>
+      <SocialContact
+        href="mailto:tobi.26romani@gmail.com"
+        target="_blank"
+        rel="noopener"
+      >
+        <MailIcon class="size-6" /> tobi.26romani@gmail.com
+      </SocialContact>
+    </nav>
 
-    <SocialContact
-    href="mailto:tobi.26romani@gmail.com"
-    target="_blank"
-    rel="noopener">
-    <MailIcon class="size-6" />
-      tobi.26romani@gmail.com
-    </SocialContact>
-		</nav>
-		
-    <div class="h-px bg-gray-400 m-4"></div>
+    <div class="h-px bg-gray-400 my-6"></div>
 
+    <!-- Experiencia -->
     <Container id="Experiencia">
-      <h1 class="text-2xl text-[#000000c9] font-bold"> Experiencia </h1>
+      <h2 class="text-2xl font-bold text-[#000000c9] mb-2">Experiencia</h2>
       <Experience />
     </Container>
 
-    <div class="h-px bg-gray-400 m-4"></div>
+    <div class="h-px bg-gray-400 my-6"></div>
 
+    <!-- Habilidades -->
     <Container id="Habilidades">
-      <h1 class="w-4xl text-2xl text-[#000000c9] font-bold"> Habilidades </h1>
-      <a class="block max-w-4xl mb-4 p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-[#e6e6ff]">Fortalezas</h5>
-        <p class=" text-gray-200">
-          Me destaco por el aprendizaje continuo, la adaptación al cambio y la proactividad. Tengo una fuerte motivación por comprender en profundidad lo que hago, no solo enfocarme en que funcione. A lo largo de mis experiencias, he desarrollado habilidades clave como la comunicación efectiva y el compromiso con cada proyecto, sin importar el contexto o el rol que ocupe.
-        </p>
-      </a>
-    <div class="max-w-4xl flex gap-4 flex-wrap">
-      <a class="block max-w-2xl mb-4 p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-[#e6e6ff]">Habilidades Técnicas</h5>
-        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-200">
-          <li>Desarrollo frontend</li>
-          <li>Desarrollo backend</li>
-          <li>Modelado y gestión de bases de datos relacionales</li>
-          <li>Office (Excel avanzado)</li>
-          <li>Documentación técnica: DER, DFD, Casos de uso</li>
-          <li>Ciclos de vida del software</li>
-          <li>Programación orientada a objetos y a componentes</li>
-        </ul>
-      </a>
+      <h2 class="text-2xl font-bold text-[#000000c9] mb-4">Habilidades</h2>
 
-      <a class="block max-w-2xl overflow-auto mb-4 ml-15 p-6 rounded-lg shadow-sm  dark:bg-[#101120a7]">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-[#e6e6ff]">Stack</h5>
-        <nav class="grid grid-cols-3 gap-8 justify-items-start">
-          <JavaIcon class="size-9" />
-          <JavaScriptIcon class="size-9" />
-          <MySqlIcon class="size-9" />
-          <CsharpIcon class="size-9" />
-          <DotNetIcon class="size-9" />
-          <SqlServerIcon class="size-9" />
-          <GitHubIcon class="size-9" />
-          <CssIcon class="size-9" />
-          <HtmlIcon class="size-9" />
-        </nav>
-      </a>
-      <a class="block max-w-2xl overflow-auto mb-4 p-6 rounded-lg shadow-sm  dark:bg-[#101120a7]">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-[#e6e6ff]">Basico</h5>
-          <nav class="grid grid-cols-1 gap-8 justify-items-center">
-            <AstroIcon class="size-9" />
-            <ReactIcon class="size-9" />
-            <SpringIcon class="size-9" />
-          </nav>
-        </a>
-    </div>
+      <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2">
+        <!-- Fortalezas -->
+        <div class="p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
+          <h3 class="text-xl font-bold mb-2 dark:text-[#e6e6ff]">Fortalezas</h3>
+          <p class="text-gray-200 text-justify">
+            Me destaco por el aprendizaje continuo, la adaptación al cambio y la
+            proactividad. Tengo una fuerte motivación por comprender en
+            profundidad lo que hago, no solo enfocarme en que funcione. A lo
+            largo de mis experiencias, he desarrollado habilidades clave como la
+            comunicación efectiva y el compromiso con cada proyecto, sin
+            importar el contexto o el rol que ocupe.
+          </p>
+        </div>
+
+        <!-- Habilidades técnicas -->
+        <div class="p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
+          <h3 class="text-xl font-bold mb-2 dark:text-[#e6e6ff]">
+            Habilidades Técnicas
+          </h3>
+          <ul class="list-disc pl-5 text-gray-200">
+            <li>Desarrollo frontend</li>
+            <li>Desarrollo backend</li>
+            <li>Modelado y gestión de bases de datos relacionales</li>
+            <li>Office (Excel avanzado)</li>
+            <li>Documentación técnica: DER, DFD, Casos de uso</li>
+            <li>Ciclos de vida del software</li>
+            <li>Programación orientada a objetos y a componentes</li>
+          </ul>
+        </div>
+
+        <!-- Stack -->
+        <div class="p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
+          <h3 class="text-xl font-bold mb-2 dark:text-[#e6e6ff]">
+            Stack principal
+          </h3>
+          <div
+            class="grid grid-cols-3 sm:grid-cols-3 gap-4 justify-items-center"
+          >
+            <JavaIcon class="size-10" />
+            <JavaScriptIcon class="size-10" />
+            <MySqlIcon class="size-10" />
+            <CsharpIcon class="size-10" />
+            <DotNetIcon class="size-10" />
+            <SqlServerIcon class="size-10" />
+            <GitHubIcon class="size-10" />
+            <CssIcon class="size-10" />
+            <HtmlIcon class="size-10" />
+          </div>
+        </div>
+
+        <!-- Tecnologías básicas -->
+        <div class="p-6 rounded-lg shadow-sm dark:bg-[#101120a7] mt-6">
+          <h3 class="text-xl font-bold mb-4 dark:text-[#e6e6ff]">
+            Conocimientos básicos
+          </h3>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-items-center"
+          >
+            <AstroIcon class="size-10" title="Astro" />
+            <ReactIcon class="size-10" title="React" />
+            <SpringIcon class="size-10" title="Spring" />
+          </div>
+        </div>
+      </div>
+
+      <div class="h-px bg-gray-400 my-6"></div>
+
+      <!-- Proyectos -->
+      <h2 class="text-2xl font-bold text-center text-[#000000c9] mb-4">
+        Proyectos
+      </h2>
+
+      <Container id="Proyectos">
+        <GestionComercial />
+      </Container>
+
+      <div class="h-px bg-gray-400 my-6"></div>
+
+      <Container>
+        <GestionTurnos />
+      </Container>
+
+      <div class="h-px bg-gray-400 my-6"></div>
     </Container>
-
-  <div class="h-px bg-gray-400 m-4"></div>
-
-  <h1 class="max-w-4xl text-center text-2xl text-[#000000c9] font-bold mb-2"> Proyectos</h1>
-  <Container id="Proyectos"> 
-    <GestionComercial />
-  </Container>
-
-   <div class="h-px bg-gray-400 m-4"></div>
-
-   <Container>
-    <GestionTurnos />
-  </Container>
-
-  <div class="h-px bg-gray-400 m-4"></div>
   </main>
 </Layout>
