@@ -1,3 +1,7 @@
-<section class="justify-center grid gap-3">
+---
+const { id } = Astro.props;
+---
+
+<section id={id} class="justify-center grid gap-3 scroll-mt-20">
     <slot />
 </section>

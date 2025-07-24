@@ -27,7 +27,7 @@ import GestionTurnos from "../components/GestionTurnos.astro";
 <Layout title="Portfolio de Tobias Romani"
 description="Desarrollo web y Escritorio">
   <main class="mt-15">
-    <Container>
+    <Container id="Presentacion">
       <img
         class="mx-2.5 rounded-full w-20 h-21"
         src="/images/FotoLinkedin.jpg"
@@ -83,14 +83,14 @@ description="Desarrollo web y Escritorio">
 		
     <div class="h-px bg-gray-400 m-4"></div>
 
-    <Container>
+    <Container id="Experiencia">
       <h1 class="text-2xl text-[#000000c9] font-bold"> Experiencia </h1>
       <Experience />
     </Container>
 
     <div class="h-px bg-gray-400 m-4"></div>
 
-    <Container>
+    <Container id="Habilidades">
       <h1 class="w-4xl text-2xl text-[#000000c9] font-bold"> Habilidades </h1>
       <a class="block max-w-4xl mb-4 p-6 rounded-lg shadow-sm dark:bg-[#101120a7]">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-[#e6e6ff]">Fortalezas</h5>
@@ -140,7 +140,7 @@ description="Desarrollo web y Escritorio">
   <div class="h-px bg-gray-400 m-4"></div>
 
   <h1 class="max-w-4xl text-center text-2xl text-[#000000c9] font-bold mb-2"> Proyectos</h1>
-  <Container> 
+  <Container id="Proyectos"> 
     <GestionComercial />
   </Container>
 
