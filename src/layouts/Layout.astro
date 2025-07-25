@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro'
 import '../styles/global.css'
 import '@fontsource-variable/inter';
+import { FollowMouse } from '../components/FollowMouse.jsx'
 
 interface Props{
 	title: string
@@ -22,6 +23,7 @@ const{ title, description } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body class="custom-gradient">
+		<FollowMouse client:load/>
 		<div class="fixed inset-0 -z-10 w-full min-h-screen bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
 		<Header />
 		<slot />
@@ -32,6 +34,7 @@ const{ title, description } = Astro.props
 	html{
 		font-family: 'Inter Variable', sans-serif;
 		font-weight: 400;
+		cursor: none;
 	}
 	body {
 		color: #373737
