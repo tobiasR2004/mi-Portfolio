@@ -42,7 +42,8 @@ import PdfIcon from "../components/Icons/PdfIcon.astro";
 
       <h1 class="text-3xl sm:text-4xl font-bold">
         Hola, soy Tobias Romani <Estado
-          ><a class="cursor-crosshair"
+          ><a
+            class="cursor-crosshair"
             href="https://www.linkedin.com/in/tobias-romani/"
             target="_blank"
             rel="noopener">✔ Disponible para Trabajar</a
@@ -84,9 +85,7 @@ import PdfIcon from "../components/Icons/PdfIcon.astro";
       >
         <MailIcon class="size-6" /> tobi.26romani@gmail.com
       </SocialContact>
-      <SocialContact
-      href="/public/Cv/CV_TobiasRomani09.pdf"
-      target="_blank">
+      <SocialContact href="/public/Cv/CV_TobiasRomani09.pdf" target="_blank">
         <PdfIcon class="size-6" /> Curriculum
       </SocialContact>
     </nav>
@@ -156,7 +155,9 @@ import PdfIcon from "../components/Icons/PdfIcon.astro";
         </div>
 
         <!-- Tecnologías básicas -->
-        <div class="p-6 rounded-lg lg:col-span-full max-w-xl mx-auto shadow-sm dark:bg-[#101120a7] mt-6">
+        <div
+          class="p-6 rounded-lg lg:col-span-full max-w-xl mx-auto shadow-sm dark:bg-[#101120a7] mt-6"
+        >
           <h3 class="text-xl font-bold mb-4 dark:text-[#e6e6ff]">
             Conocimientos básicos
           </h3>
@@ -190,10 +191,18 @@ import PdfIcon from "../components/Icons/PdfIcon.astro";
       <div class="h-px bg-gray-400 my-6"></div>
     </Container>
 
-    <Container id="cursos"> 
-      <h2 class="text-2xl m-auto font-bold text-[#000000c9] mb-4"> Certificados </h2>
-      <section class="flex flex-col max-h-10/12 w-7xl md:flex-row shadow-2xl bg-[#bbb7b728] text-white rounded-xl overflow-hidden">
-        <img src="/images/certificadoSpringUdemy.jpg" alt="Curso Springboot" class="flex m-auto w-2xl h-5/6 rounded-md transition-transform duration-150 hover:scale-105 hover:shadow-xl">
+    <Container id="cursos">
+      <h2 class="text-2xl m-auto font-bold text-[#000000c9] mb-4">
+        Certificados
+      </h2>
+      <section
+        class="flex flex-col md:flex-row max-w-7xl mx-auto p-6 shadow-2xl bg-[#bbb7b728] text-white rounded-xl overflow-hidden"
+      >
+        <img
+          src="/images/certificadoSpringUdemy.jpg"
+          alt="Curso Springboot"
+          class="flex m-auto  rounded-lg w-full md:w-1/2 transition-transform duration-150 hover:scale-105 hover:shadow-xl"
+        />
       </section>
     </Container>
   </main>
