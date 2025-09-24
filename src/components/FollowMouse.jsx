@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 export const FollowMouse = () => {
   const [posicion, setPosicion] = useState({ x: 0, y: 0 })
+  const [activo, setActivo] = useState(false)
 
   useEffect(() => {
     const handleMove = (event) => {
@@ -11,14 +12,26 @@ export const FollowMouse = () => {
     }
     window.addEventListener('pointermove', handleMove)
 
+    // Detectar si hay mouse y si la pantalla es XL o más grande
+    const hayMouse = window.matchMedia("(hover: hover) and (pointer: fine)").matches
+    const esXL = window.matchMedia("(min-width: 1280px)").matches
+
+    if (hayMouse && esXL) {
+      setActivo(true)
+      window.addEventListener('pointermove', handleMove)
+    }
+
     return () => {
       window.removeEventListener('pointermove', handleMove)
     }
-  })
+  }, [])
+
+  if (!activo) return null // si no cumple las condiciones, no renderiza nada
 
   return (
     <main>
-      <div className='fixed z-[9999] bg-black/50 rounded-full opacity-80 pointer-events-none w-20 h-20 blur-xl'
+      <div
+        className="fixed z-[9999] bg-black/50 rounded-full opacity-80 pointer-events-none w-20 h-20 blur-xl"
         style={{
           left: -36,
           top: -36,
@@ -26,5 +39,4 @@ export const FollowMouse = () => {
         }}
       />
     </main>
-  )
-}
+  )}
