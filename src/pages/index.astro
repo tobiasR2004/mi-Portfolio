@@ -21,6 +21,7 @@ import ReactIcon from "../components/Icons/ReactIcon.astro";
 import SpringIcon from "../components/Icons/SpringIcon.astro";
 import GestionComercial from "../components/GestionComercial.astro";
 import GestionTurnos from "../components/GestionTurnos.astro";
+import PdfIcon from "../components/Icons/PdfIcon.astro";
 ---
 
 <Layout
@@ -82,6 +83,11 @@ import GestionTurnos from "../components/GestionTurnos.astro";
         rel="noopener"
       >
         <MailIcon class="size-6" /> tobi.26romani@gmail.com
+      </SocialContact>
+      <SocialContact
+      href="/public/Cv/CV_TobiasRomani09.pdf"
+      target="_blank">
+        <PdfIcon class="size-6" /> Curriculum
       </SocialContact>
     </nav>
 
@@ -182,6 +188,13 @@ import GestionTurnos from "../components/GestionTurnos.astro";
       </Container>
 
       <div class="h-px bg-gray-400 my-6"></div>
+    </Container>
+
+    <Container id="cursos"> 
+      <h2 class="text-2xl m-auto font-bold text-[#000000c9] mb-4"> Certificados </h2>
+      <section class="flex flex-col max-h-10/12 w-7xl md:flex-row shadow-2xl bg-[#bbb7b728] text-white rounded-xl overflow-hidden">
+        <img src="/public/images/certificadoSpringUdemy.jpg" alt="Curso Springboot" class="flex m-auto w-3xl h-5/6 rounded-md transition-transform duration-150 hover:scale-105 hover:shadow-xl">
+      </section>
     </Container>
   </main>
 </Layout>
