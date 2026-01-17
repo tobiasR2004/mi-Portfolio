@@ -1,55 +1,89 @@
 ---
+import CsharpIcon from "./Icons/CsharpIcon.astro";
+import DotNetIcon from "./Icons/DotNetIcon.astro";
+import SqlServerIcon from "./Icons/SqlServerIcon.astro";
+import GitHubIcon from "./Icons/GitHubIcon.astro";
 ---
 
-<section class="flex flex-col max-w-7xl md:flex-row shadow-2xl bg-[#bbb7b728] text-white rounded-xl overflow-hidden">
+<section
+  class="flex flex-col max-w-7xl md:flex-row shadow-2xl bg-[#bbb7b728] text-white rounded-xl overflow-hidden w-full"
+>
   <!-- Columna de texto -->
   <div class="w-full md:w-1/2 p-8">
-    <h2 class="text-2xl text-[#000000c9] font-bold">Gestion de turnos centro medico</h2>
-    <p class="text-sm text-gray-700 font-semiBold">(Aplicacion de escritorio)</p>
+    <h2 class="text-2xl text-[#000000c9] font-bold">
+      Gestion de turnos centro medico
+    </h2>
+    <p class="text-sm text-gray-700 font-semiBold">
+      (Aplicacion de escritorio)
+    </p>
 
     <div class="pt-8 my-10">
-      <h3 class="text-gray-800 font-bold">Tecnologias utilizadas</h3>
-      <p class="text-gray-700">Desarrollado en visual c#. Las tecnologías utilizadas fueron: c#, .NET, SQLserver y GitHub.</p>
+      <h3 class="text-gray-800 font-bold mb-4">Tecnologias utilizadas</h3>
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="flex items-center gap-2 px-3 py-1 bg-[#101120] text-white rounded-full text-xs font-semibold shadow-md"
+          ><CsharpIcon class="size-4" /> C#</span
+        >
+        <span
+          class="flex items-center gap-2 px-3 py-1 bg-[#101120] text-white rounded-full text-xs font-semibold shadow-md"
+          ><DotNetIcon class="size-4" /> .NET</span
+        >
+        <span
+          class="flex items-center gap-2 px-3 py-1 bg-[#101120] text-white rounded-full text-xs font-semibold shadow-md"
+          ><SqlServerIcon class="size-4" /> SQL Server</span
+        >
+        <span
+          class="flex items-center gap-2 px-3 py-1 bg-[#101120] text-white rounded-full text-xs font-semibold shadow-md"
+          ><GitHubIcon class="size-4" /> GitHub</span
+        >
+      </div>
     </div>
 
     <div class="my-10">
       <h3 class="text-gray-800 font-bold">Problemas resueltos</h3>
-      <p class="text-gray-700">Agilización de gestión de turnos, registro de: clientes, médicos y además agregamos el registro de diagnósticos de las consultas.</p>
+      <p class="text-gray-700">
+        Agilización de gestión de turnos, registro de: clientes, médicos y
+        además agregamos el registro de diagnósticos de las consultas.
+      </p>
     </div>
 
     <div class="my-10">
       <h3 class="text-gray-800 font-bold">Rol en el desarrollo</h3>
       <p class="text-gray-700">
-        Fue desarrollado por mí y un colega con el cual nos encargamos del total del desarrollo,
-        desde la creación de la base de datos, interfaces y back-end. Trabajando ambos en todas las etapas del desarrollo.
+        Fue desarrollado por mí y un colega con el cual nos encargamos del total
+        del desarrollo, desde la creación de la base de datos, interfaces y
+        back-end. Trabajando ambos en todas las etapas del desarrollo.
       </p>
     </div>
 
-    <div class="my-10" >
+    <div class="my-10">
       <h3 class="text-gray-800 font-bold">Funcionalidades</h3>
       <ul class="text-gray-700 list-disc list-inside">
         <li>Inicio de sesión</li>
         <li>Creación y modificación de usuarios</li>
-        <li>Alta, baja y modificación de Pacientes, médicos y consultas (con sus respectivos diagnósticos)</li>
+        <li>
+          Alta, baja y modificación de Pacientes, médicos y consultas (con sus
+          respectivos diagnósticos)
+        </li>
       </ul>
     </div>
   </div>
 
   <!-- Columna de imagen -->
   <div class="w-full flex flex-col md:w-1/2 md:h-full">
-  <div class="flex-1 p-4">
-    <img
-      src="/images/MenuTurnos.PNG"
-      alt="Menu principal De turnos"
-      class="w-155 h-80 rounded-lg shadow-md transition-transform duration-150 hover:scale-105 hover:shadow-xl"
-    />
+    <div class="flex-1 p-4">
+      <img
+        src="/images/MenuTurnos.PNG"
+        alt="Menu principal De turnos"
+        class="w-155 h-80 rounded-lg shadow-md transition-transform duration-150 hover:scale-105 hover:shadow-xl"
+      />
+    </div>
+    <div class="flex-1 p-4">
+      <img
+        src="/images/AltaPacientesTurnos.PNG"
+        alt=""
+        class="w-155 h-80 rounded-lg shadow-md transition-transform duration-150 hover:scale-105 hover:shadow-xl"
+      />
+    </div>
   </div>
-  <div class="flex-1 p-4">
-    <img
-      src="/images/AltaPacientesTurnos.PNG"
-      alt=""
-      class="w-155 h-80 rounded-lg shadow-md transition-transform duration-150 hover:scale-105 hover:shadow-xl"
-    />
-  </div>
-</div>
 </section>

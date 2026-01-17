@@ -19,6 +19,8 @@ import SqlServerIcon from "../components/Icons/SqlServerIcon.astro";
 import AstroIcon from "../components/Icons/AstroIcon.astro";
 import ReactIcon from "../components/Icons/ReactIcon.astro";
 import SpringIcon from "../components/Icons/SpringIcon.astro";
+import SetPoint from "../components/SetPoint.astro";
+import CyberStream from "../components/CyberStream.astro";
 import GestionComercial from "../components/GestionComercial.astro";
 import GestionTurnos from "../components/GestionTurnos.astro";
 import PdfIcon from "../components/Icons/PdfIcon.astro";
@@ -178,17 +180,75 @@ import PdfIcon from "../components/Icons/PdfIcon.astro";
         Proyectos
       </h2>
 
-      <Container id="Proyectos">
-        <GestionComercial />
-      </Container>
+      <section
+        id="Proyectos"
+        class="flex flex-col items-center gap-6 scroll-mt-20 w-full"
+      >
+        <SetPoint />
+        <div class="h-px bg-gray-400 my-6 w-full max-w-7xl"></div>
+        <CyberStream />
 
-      <div class="h-px bg-gray-400 my-6"></div>
+        <div
+          id="extra-projects"
+          class="hidden w-full flex flex-col items-center"
+        >
+          <div class="h-px bg-gray-400 my-6 w-full max-w-7xl"></div>
+          <GestionComercial />
+          <div class="h-px bg-gray-400 my-6 w-full max-w-7xl"></div>
+          <div class="w-full flex justify-center">
+            <GestionTurnos />
+          </div>
+        </div>
 
-      <Container>
-        <GestionTurnos />
-      </Container>
+        <div class="flex justify-center mt-8 w-full">
+          <button
+            id="toggle-projects-btn"
+            class="flex items-center gap-2 px-6 py-2 bg-[#070149c9] text-white rounded-full hover:bg-[#070149] transition-colors duration-300"
+          >
+            <span>Ver más proyectos</span>
+            <svg
+              id="toggle-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="transition-transform duration-300"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
 
-      <div class="h-px bg-gray-400 my-6"></div>
+      <script>
+        const btn = document.getElementById("toggle-projects-btn");
+        const extraProjects = document.getElementById("extra-projects");
+        const icon = document.getElementById("toggle-icon");
+        const btnText = btn?.querySelector("span");
+
+        btn?.addEventListener("click", () => {
+          const isHidden = extraProjects?.classList.contains("hidden");
+
+          if (isHidden) {
+            extraProjects?.classList.remove("hidden");
+            if (btnText) btnText.textContent = "Ver menos";
+            icon?.classList.add("rotate-180");
+          } else {
+            extraProjects?.classList.add("hidden");
+            if (btnText) btnText.textContent = "Ver más proyectos";
+            icon?.classList.remove("rotate-180");
+            // Opcional: scroll suave hacia arriba si se cierra
+            document
+              .getElementById("Proyectos")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      </script>
     </Container>
 
     <Container id="cursos">
@@ -201,7 +261,7 @@ import PdfIcon from "../components/Icons/PdfIcon.astro";
         <img
           src="/images/certificadoSpringUdemy.jpg"
           alt="Curso Springboot"
-          class="flex m-auto  rounded-lg w-full md:w-1/2 transition-transform duration-150 hover:scale-105 hover:shadow-xl"
+          class="flex m-auto rounded-lg w-full md:w-1/2 transition-transform duration-150 hover:scale-105 hover:shadow-xl"
         />
       </section>
     </Container>

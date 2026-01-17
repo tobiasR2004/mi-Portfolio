@@ -16,7 +16,7 @@ export const FollowMouse = () => {
     const hayMouse = window.matchMedia("(hover: hover) and (pointer: fine)").matches
     const esXL = window.matchMedia("(min-width: 1280px)").matches
 
-    if (hayMouse && esXL) {
+    if (hayMouse) {
       setActivo(true)
       window.addEventListener('pointermove', handleMove)
     }
