@@ -24,6 +24,26 @@ import CyberStream from "../components/CyberStream.astro";
 import GestionComercial from "../components/GestionComercial.astro";
 import GestionTurnos from "../components/GestionTurnos.astro";
 import PdfIcon from "../components/Icons/PdfIcon.astro";
+
+// CAMBIAR: Tomar capturas de los PDFs y guardarlas como imagenes de vista previa.
+const diplomas = [
+  {
+    id: 1,
+    titulo: "Desarrollo Web con Spring Boot",
+    institucion: "Udemy",
+    fecha: "2024",
+    imagenPreview: "/images/TituloSpringUdemy.png",
+    pdfUrl: "/Titulos/TituloSpringUdemy.pdf",
+  },
+  {
+    id: 2,
+    titulo: "Tecnicatura Superior en Analisis y Desarrollo de Software",
+    institucion: "Colegio Terciario Celestino Irineo Marcó N° 8",
+    fecha: "03/2022 - 02/2025",
+    imagenPreview: "/images/TituloCIM.png",
+    pdfUrl: "/Titulos/TituloCIM.pdf",
+  },
+];
 ---
 
 <Layout
@@ -203,7 +223,7 @@ import PdfIcon from "../components/Icons/PdfIcon.astro";
         <div class="flex justify-center mt-8 w-full">
           <button
             id="toggle-projects-btn"
-            class="flex items-center gap-2 px-6 py-2 bg-[#070149c9] text-white rounded-full hover:bg-[#070149] transition-colors duration-300"
+            class="flex items-center gap-2 px-6 py-2 bg-[#070149c9]/80 text-white rounded-full hover:bg-[#070149] cursor-crosshair p-6 transition-colors duration-300"
           >
             <span>Ver más proyectos</span>
             <svg
@@ -252,17 +272,48 @@ import PdfIcon from "../components/Icons/PdfIcon.astro";
     </Container>
 
     <Container id="cursos">
-      <h2 class="text-2xl m-auto font-bold text-[#000000c9] mb-4">
+      <h2 class="text-2xl m-auto font-bold text-[#000000c9] mb-8">
         Certificados
       </h2>
-      <section
-        class="flex flex-col md:flex-row max-w-7xl mx-auto p-6 shadow-2xl bg-[#bbb7b728] text-white rounded-xl overflow-hidden"
+
+      <!-- Carrusel Infinito -->
+      <!-- Uso de mask-image para un desvanecimiento que funcione con cualquier fondo -->
+      <section 
+        class="relative w-full overflow-hidden py-10"
+        style="-webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent); mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);"
       >
-        <img
-          src="/images/certificadoSpringUdemy.jpg"
-          alt="Curso Springboot"
-          class="flex m-auto rounded-lg w-full md:w-1/2 transition-transform duration-150 hover:scale-105 hover:shadow-xl"
-        />
+        <!-- Track que se mueve -->
+        <div class="flex w-max gap-8 animate-scroll">
+          {
+            [...diplomas, ...diplomas].map((diploma) => (
+              <a 
+                href={diploma.pdfUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="relative w-[300px] md:w-[400px] flex-shrink-0 rounded-xl overflow-hidden shadow-2xl transition-transform hover:scale-105 bg-[#bbb7b728] group"
+              >
+                <div class="relative w-full aspect-[4/3] overflow-hidden">
+                    <img
+                      src={diploma.imagenPreview}
+                      alt={diploma.titulo}
+                      class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90 bg-white"
+                    />
+                    <!-- Overlay con icono de PDF -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <PdfIcon class="size-12 text-white drop-shadow-lg" />
+                    </div>
+                </div>
+                
+                <div class="p-4 bg-[#101120] text-white">
+                  <h3 class="font-bold text-lg truncate" title={diploma.titulo}>
+                    {diploma.titulo}
+                  </h3>
+                  <p class="text-sm text-gray-400">{diploma.institucion}</p>
+                </div>
+              </a>
+            ))
+          }
+        </div>
       </section>
     </Container>
   </main>
